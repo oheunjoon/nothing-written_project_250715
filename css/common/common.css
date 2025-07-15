@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "ChosunKm";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunKm.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  > body {
+    font-family: "ChosunKm";
+    overflow-x: hidden;
+  }
+}
+
+a {
+  color: #020202;
+}

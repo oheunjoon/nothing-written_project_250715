@@ -1,0 +1,802 @@
+@charset "utf-8";
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  line-height: 16px;
+  font-size: 12px;
+  z-index: 99;
+  height: 62px;
+  width: 100%;
+  padding: 10px;
+  /* 	background-color: pink; */
+  border-top: 1px solid transparent;
+}
+
+#header .logo {
+  position: absolute;
+  top: 0px;
+  opacity: 1;
+  transition: ease 0.3s;
+  /* 	display: block; */
+  /* 	background-color: yellow; */
+}
+
+#header .logo a {
+  text-decoration: none;
+  outline: none;
+  color: #020202;
+  display: inline-block;
+  transition: ease 0.5s;
+  /* 	font-size: 25px;
+	color: #020202;
+	display: inline-block; */
+  /* 	border:2px solid; */
+}
+
+#header .logo svg {
+  height: 18px;
+  margin: 13px 0 0;
+  width: auto;
+  /* 	border:5px solid red; */
+}
+
+#header .category ul {
+  left: 50%;
+  top: 25%;
+  transform: translatex(-50%);
+  position: absolute;
+  text-align: center;
+  /* border:3px solid red; */
+}
+
+#header .category ul li {
+  display: inline-block;
+  margin: 0 20px;
+  /* 	background-color: white; */
+
+  /* 		border:5px solid yellow; */
+}
+
+#header .category ul li a {
+  position: relative;
+  z-index: 88;
+  font-size: 13px;
+  text-transform: uppercase;
+  /* 	border:2px solid red; */
+}
+
+#header .category ul li a:hover {
+  color: #000;
+  transition: ease 0.5s;
+  font-style: italic;
+}
+
+#header .shoppingBag {
+  position: relative;
+  float: right;
+  /* 	border:2px solid gray; */
+}
+
+#header .shoppingBag p {
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: right;
+  float: left;
+  /* 	margin-top: -15px; */
+  margin-left: 50px;
+  /* 		 	background-color: skyblue;  */
+}
+
+.Login__USD {
+  display: none;
+}
+
+.Login__USD2 {
+  display: none;
+}
+
+.Login__USD3 {
+  display: none;
+}
+
+/* 섹션 내부 요소를 너무 넓게 퍼지는 걸 막아주는 용도 */
+.content-inner {
+  margin: 250px -10px;
+  padding: 0 5rem;
+  /* 	border: 2px solid red; */
+}
+
+/* 섹션1 */
+#contents {
+  margin-top: 250px;
+  width: 100%;
+  height: 90vw;
+  position: relative;
+  /* 		border: 1px solid red; */
+}
+
+#contents > .home {
+  height: 90vw;
+  /* 	border:3px solid blue; */
+}
+
+#contents > .home > .home-cover > .home-cover-img {
+  background-image: url(https://nothing-written.com/web/upload/category/editor/2025/06/24/a1c0e0f5431c579bbc3ed2e5dad75738.jpg);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vw;
+  /* 	border:2px solid; */
+}
+
+.home-cover-contnet {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 0 5rem;
+
+  /* 	border: 2px solid yellowgreen; */
+}
+
+.home-cover-contnet > h1 {
+  line-height: 18px;
+  font-size: 20px;
+  /* 	background-color: yellow; */
+}
+
+.home-cover-contnet > p {
+  line-height: 18px;
+  font-size: 12px;
+  width: 65%;
+  /* 	background-color: gray; */
+}
+
+/* 섹션2 */
+.home-products {
+  margin: 120px 0;
+  /* 	border: 2px solid red; */
+}
+
+.home-products .svg-title {
+  text-align: center;
+  margin: 50px 0 50px;
+  height: 80px;
+  /* 	background-color: yellowgreen; */
+}
+
+.svg-title svg {
+  display: inline-block;
+  text-align: center;
+  width: 100px;
+  margin-top: 15px;
+  /* 		border: 2px solid; */
+}
+
+.thumbnail-image {
+  position: relative;
+  width: 100%;
+  margin-top: 70px;
+  height: clamp(10rem, 45vw, 60vh);
+  display: flex;
+
+  > .thumbnail-card {
+    width: calc(100% / 4);
+    height: 100%;
+  }
+
+  .thumbnail-image-clothes {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .product-clothes-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      cursor: pointer;
+    }
+  }
+
+  .thumbnail-info {
+    font-size: 13px;
+    margin-top: 10px;
+    width: 60%;
+    min-height: 200px;
+    /* 		background-color: red; */
+
+    .price {
+      letter-spacing: 1px;
+      color: #1a1a1a;
+      /* 			border:3px solid yellow; */
+    }
+  }
+}
+
+/* 섹션3 */
+.homeLooks {
+  /* 	width:100%;
+	border:3px solid red; */
+  max-width: 1680px;
+  margin: 120px auto;
+
+  .content-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > div {
+      width: calc(50% - 40px);
+    }
+
+    .col {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .homeLook-product__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-inline: 40px;
+    gap: 40px;
+    /* 		width:100%;
+		border:3px solid red; */
+
+    .product-link {
+      display: block;
+      width: 100%;
+    }
+
+    .product-clothes-img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .product-info {
+      font-size: 12px;
+      margin-top: 10px;
+      font-weight: 600;
+
+      .price {
+        color: #1a1a1a;
+      }
+    }
+  }
+}
+
+.homeLook-product-title_1 {
+  margin-top: 300px;
+  height: 40px;
+  font-size: 12px;
+  display: block;
+  /* 		border: 3px solid; */
+}
+
+.homeLook-product-title_2 {
+  margin-top: 300px;
+  height: 40px;
+  font-size: 12px;
+  display: block;
+  /* 		border: 3px solid green; */
+}
+
+/* 섹션4 */
+.home-store {
+  margin: 0;
+  /* 		border:5px solid; */
+}
+
+.home-store > .content-inner > .svg-title2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 160px 0 160px;
+  /* 	border:3px solid red; */
+}
+
+.home-store > .content-inner > .svg-title2 svg {
+  height: 35px;
+  /* 	border:3px solid yellow; */
+}
+
+.home-store .home-store-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 15px 0;
+
+  /* 	border:4px solid blue; */
+}
+
+.home-store .home-store-content h3 {
+  font-size: 14.04px;
+  color: #1a1a1a;
+  /* 	border:4px solid skyblue; */
+}
+
+.home-store .home-store-content .italic {
+  font-size: 12px;
+  color: #1a1a1a;
+  /* 	border:4px solid skyblue; */
+}
+
+/* 푸터 */
+#footer {
+  padding: 10px 10px 10px;
+  line-height: 18px;
+  position: relative;
+  z-index: 101;
+  margin-top: 100px;
+  font-size: 12px;
+  color: #1a1a1a;
+  /* 	height: 100px; */
+  /* 	border: 3px solid red; */
+}
+
+#footer > .copy {
+  width: 25%;
+  float: left;
+  /* 	border: 3px solid black; */
+}
+
+#footer > ul {
+  column-count: 4;
+  max-width: 680px;
+  width: 60%;
+  float: left;
+  /* 	background-color: yellow; */
+}
+
+#footer > ul > li > a {
+  outline: none;
+  display: inline-block;
+  color: #020202;
+  transition: ease 0.5s;
+  /* 	background-color: yellowgreen; */
+}
+
+#footer > ul > li > a:hover {
+  text-decoration: none;
+  color: #a9a9a9;
+  transition: ease 0.5s;
+  /* 	background-color: yellowgreen; */
+}
+
+#footer > .credit {
+  float: right;
+  /* 	border: 5px solid blue; */
+}
+
+#footer > .credit > a {
+  outline: none;
+  display: inline-block;
+  color: #020202;
+  transition: ease 0.5s;
+  /* 	background-color: yellowgreen; */
+}
+
+#footer > .credit > a:hover {
+  text-decoration: none;
+  color: #a9a9a9;
+  transition: ease 0.5s;
+  /* 	background-color: yellowgreen; */
+}
+
+.footer-payments .payments_add {
+  /* 	border: 3px solid brown; */
+}
+
+.footer-payments > .footer-add {
+  margin-top: 100px;
+  /* 	background-color: green; */
+}
+
+.footer-payments a {
+  outline: none;
+  color: #020202;
+  display: inline-block;
+  transition: ease 0.5s;
+  /* 	border:3px solid red; */
+}
+
+.footer-payments a:hover {
+  text-decoration: none;
+  color: #a9a9a9;
+  transition: ease 0.5s;
+}
+
+/* 반응형 작업 */
+@media (width > 780px) {
+  i {
+    display: none !important;
+  }
+}
+
+@media (max-width: 780px) {
+  /* 헤더	 */
+
+  .site-wrap {
+    position: relative;
+    left: 0;
+    transition: left ease 0.3s;
+  }
+
+  body.nav-active {
+    #header {
+      left: 80% !important;
+
+      .category {
+        transform: translateX(0);
+      }
+    }
+
+    .site-wrap {
+      position: relative;
+      left: 80%;
+    }
+  }
+
+  #header {
+    width: 100%;
+    height: 35px;
+    background-color: #fafaf8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    transition: ease 0.3s;
+    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.15);
+    /* 		border:3px solid red; */
+  }
+
+  #header .logo {
+    height: 20px;
+    left: 25px;
+    top: 8px;
+    /* 		border:3px solid red; */
+  }
+
+  #header .logo svg {
+    height: 13px;
+    margin-top: 3px;
+  }
+
+  #header .logo a {
+    font-size: 18px;
+    /* 		border:3px solid red; */
+  }
+
+  #header .category {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    transform: translatex(-100%);
+    transition: transform ease 0.3s;
+
+    .category-content {
+      padding: 10px;
+      width: 80%;
+      height: 100%;
+      background-color: #fafaf8;
+      background-color: fff;
+    }
+  }
+
+  #header .category__head i {
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .category__body {
+    /* 		border:1px solid red; */
+    width: 100%;
+    height: 800px;
+    padding: 60px 0;
+    position: relative;
+    display: block;
+  }
+
+  .category__body ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 30px;
+    position: absolute;
+    margin-top: -200px;
+    /* 		padding:0; */
+    /* 		margin:0; */
+    height: 800px;
+
+    /* 		border: 4px solid yellowgreen; */
+  }
+
+  .category__body ul li {
+    position: relative;
+    line-height: 30px;
+    margin: 0 0 12px;
+    width: 100%;
+
+    text-align: left;
+    /* 		border: 1px solid black; */
+  }
+
+  .category__body ul .Login__USD {
+    position: absolute;
+    bottom: -300px;
+    left: 0;
+    display: block;
+    /* 		border:3px solid red; */
+  }
+
+  .category__body ul .Login__USD2 {
+    position: absolute;
+    bottom: -310px;
+    left: 0;
+    display: block;
+    /* 		border:3px solid red; */
+  }
+
+  #header .category ul li a:hover {
+    font-style: normal;
+    text-decoration: none;
+    color: #a9a9a9;
+  }
+
+  .category__body ul .Login__USD3 {
+    position: absolute;
+    bottom: -320px;
+    left: 0;
+    display: block;
+    width: 200px;
+    color: gray;
+    cursor: text;
+    border-bottom: 1px solid #020202;
+  }
+
+  #header .category.active {
+    transform: translateX(0);
+  }
+
+  #header .shoppingBag > :not(.Bag) {
+    display: none;
+  }
+
+  #header .shoppingBag > .Bag {
+    margin-top: -5px;
+    color: #020202;
+    transition: ease 0.5s;
+    /* 		border:3px solid red; */
+  }
+
+  #header .shoppingBag > .Bag:hover {
+    text-decoration: none;
+    color: #a9a9a9;
+  }
+
+  /* 	헤더 아이콘  */
+  .burger {
+    cursor: pointer;
+    /* 		border: 3px solid red; */
+  }
+
+  /* 섹션1 */
+  .home-cover-contnet {
+    padding: 0 15px;
+    display: block;
+    /* 		border: 3px solid red; */
+
+    h1 {
+      margin: 0 0 15px;
+      font-size: 16px;
+      line-height: 14px;
+      /* 			border:3px solid red; */
+    }
+
+    p {
+      width: 100%;
+      /* 			border:3px solid red; */
+    }
+  }
+
+  /* 섹션2 */
+  .svg-title svg {
+    height: 25px;
+    /* 		border:2px solid; */
+  }
+
+  .home-products {
+    margin: 60px -15px;
+    /* 				border:3px solid red; */
+
+    .content-inner {
+      margin: 0;
+      padding: 0;
+    }
+
+    .thumbnail-image {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      height: auto;
+
+      .thumbnail-card {
+        width: 100%;
+        height: auto;
+        /* 						border:3px solid red; */
+
+        .thumbnail-image-clothes {
+          display: block;
+          height: auto;
+        }
+
+        .priceTitle {
+          display: block;
+        }
+
+        .thumbnail-info {
+          padding: 8px 15px 0;
+          width: 100%;
+          margin-top: 0;
+          min-height: 80px;
+          /* 							border:3px solid red; */
+
+          > * {
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+
+  /* 섹션3 */
+
+  .homeLooks .content-inner {
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    /* 		border:3px solid; */
+  }
+
+  .homeLooks .col {
+    width: 100% !important;
+    height: auto;
+    /* 			border:3px solid; */
+  }
+
+  .homeLook-product {
+    width: 100% !important;
+    display: flex;
+    /* 		border:3px solid red; */
+  }
+
+  .homeLook-product__inner {
+    width: 100% !important;
+    height: auto;
+    margin-top: 50px;
+    /* 		border:3px solid red; */
+  }
+
+  /* 섹션4 */
+  .home-store {
+    margin: 0 0px;
+    /* 		border:3px solid red; */
+  }
+
+  .svg-title2 > svg {
+    width: 100px;
+    /* 		border:3px solid red; */
+  }
+
+  .home-store-content {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+
+    > div {
+      margin-right: auto;
+      padding-top: 10px;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+  }
+
+  /* 	푸터 */
+  #footer {
+    position: relative;
+    margin-top: 10vh;
+    left: 0;
+    bottom: 0;
+    padding: 20px 15px;
+
+    > .copy {
+      width: 100%;
+      float: none;
+      /* 			border:3px solid; */
+    }
+
+    ul {
+      width: 100%;
+      column-count: 3;
+      margin-top: 25px;
+      clear: both;
+      /* 			border:3px solid; */
+    }
+  }
+
+  .credit {
+    display: none;
+    /* 		border:3px solid red; */
+  }
+
+  #footer .footer-payments {
+    margin-bottom: 25px;
+    margin-top: 65px;
+    /* 		border:3px solid green; */
+  }
+}
+
+/* Q&A버튼 */
+
+.iDJhmj {
+  position: fixed;
+  z-index: 10;
+  overflow: visible;
+  display: flex;
+  flex-wrap: nowrap;
+  width: auto;
+  background: transparent;
+  bottom: 20px;
+  right: 24px;
+  /* 		border: 3px solid greenyellow; */
+}
+
+.eFtrzp {
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+button {
+  box-sizing: border-box;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  font-style: inherit;
+  font-variant: inherit;
+  font-weight: inherit;
+  font-stretch: inherit;
+  font-size: inherit;
+  font-optical-sizing: inherit;
+  font-size-adjust: inherit;
+  font-kerning: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  font-family: NotoSansKR, -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "맑은 고딕", "Segoe UI", Roboto, "system-ui", "sans-serif";
+  line-height: inherit;
+  color: inherit;
+  text-shadow: transparent 0px 0px 0px;
+  letter-spacing: inherit;
+  background: transparent;
+  border: 0px solid transparent;
+  box-shadow: transparent 0px 0px 0px;
+}
+
+.dNAfKn {
+  width: 113.5px;
+  height: 71px;
+}
